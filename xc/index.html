@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body style="background: url(.././123/bj1.png); background-size: 1600px;">
+    <!-- 音乐播放器 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">    <div class="aplayer" data-id="7392824644" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"        data-volume="0.6" ></div><script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script><script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- 音乐播放器 -->
+    <div style="justify-content: center;">
+        <div class="tobu">
+            <div>
+                <h1>相册</h1>
+                <h3></h3>
+            </div>
+            <div>
+                <div class="tabbar">
+                    <ul>
+                        <li class="item active">
+                            <a onclick="delayURL('../xc/xc/Album_20Title/index.html',1000)">
+                                <span class="icon">
+                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                </span>
+                                <span class="text">全部</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a onclick="delayURL('./jtz/index.html',1000)">
+                                <span class="icon">
+                                    <i class="fa fa-heart" aria-hidden="true"></i>
+                                </span>
+                                <span class="text">集体照</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a onclick="delayURL('./tx/index.html',1000)">
+                                <span class="icon">
+                                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
+                                </span>
+                                <span class="text">特效</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a onclick="delayURL('./sp/index.html',1000)">
+                                <span class="icon">
+                                    <i class="fa fa-bell" aria-hidden="true"></i>
+                                </span>
+                                <span class="text">视频</span>
+                            </a>
+                        </li>
+                        <li class="item">
+                            <a onclick="delayURL('./mx.html',1000)">
+                                <span class="icon">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                </span>
+                                <span class="text">鸣谢</span>
+                            </a>
+                        </li>
+                        <div class="active-bg"></div>
+                    </ul>
+                </div>
+                <script>
+                    //获取所以的.item元素
+                    let items = document.querySelectorAll(".item");
+                    //设置当前选中样式的方法
+                    function setActive(){
+                        // 遍历所有.item元素,移除active样式
+                        items.forEach((item)=>{
+                            item.classList.remove("active");
+                        })
+                        // 为当前选中项添加active样式
+                        this.classList.add("active");
+                    }
+                    // 遍历所有.item元素,分别为其设置点击事件
+                    items.forEach((item)=>{
+                        item.addEventListener("click",setActive);
+                    })
+                </script>
+                <script type="text/javascript">
+                    function delayURL(url, time) {
+                        setTimeout("top.location.href = '" + url + "'", time);
+                    }
+                </script>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
