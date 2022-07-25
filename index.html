@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TC2006</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            overflow-x: hidden;
+        }
+
+        .background {
+            background-image: url("./img/road.jpg");
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 200vh;
+            font: 900 23rem '';
+            line-height: 130vh;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .background::before {
+            content: '';
+            background-size: cover;
+            background-image: inherit;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -99;
+        }
+
+        h1 {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 10px;
+            color: #fff;
+        }
+
+        h2 {
+            position: absolute;
+            letter-spacing: 2px;
+            top: 120vh;
+            width: 60%;
+            color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        a:link {color: rgb(197, 197, 199)} /* 未被访问的链接 蓝色 */
+        a:visited {color: rgb(197, 197, 199)} /* 已被访问过的链接 蓝色 */
+        a:hover {color: rgb(197, 197, 199)} /* 鼠标悬浮在上的链接 蓝色 */
+        a:active {color: rgb(197, 197, 199)} /* 鼠标点中激活链接 蓝色 */
+        .a {
+            position: absolute;
+            top: 160vh;
+            left: 25%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .card {
+            margin: 8px;
+            margin-right: 55px;
+            margin-top: 8px;
+            display: flex;
+            background-color: rgba(255,255, 255,0.1);
+            border-radius: 15px;
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(255,255,255,0.5);
+            border-left: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+            height: 230px;
+            width: 200px;
+            align-items: center;
+            flex-direction: column;
+        }
+        img {
+            width: 160px;
+            height: 140px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        a {
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: larger;
+            background-color: rgb(116, 194, 116);
+            border-radius: 50px;
+            box-shadow:  6px 6px 12px #6fb2bb,
+             -6px -6px 12px #93ecf7;
+        }
+        @font-face {
+            font-family: 'poemb';
+            src:  url('./123/JamMono.ttf') format('truetype');
+            font-weight: normal;
+            font-style:italic;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 音乐播放器 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">    <div class="aplayer" data-id="7392824644" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"        data-volume="0.6" ></div><script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script><script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- 音乐播放器 -->
+    <h1><br><br>人间忽晚，山河已秋。</h1>
+    <div class="background"><span>TC2006</span></div>
+    <h2>
+        In fact, the best way to spend autumn is to sit with you under a osmanthus tree, and every time a small osmanthus flower falls, we will exchange a word with each other. When the flowers are gone, our heads are stained with yellow stars, and then we will go with you to see the snow in the winter
+    </h2>
+
+    <script>
+        const background = document.querySelector(".background")
+
+        document.addEventListener('scroll', () => {
+            const scrollY = window.scrollY
+
+            if (scrollY !== 0) {
+                background.style.backgroundPosition = `calc(50% + ${2 * scrollY}px) calc(50% + ${scrollY}px)`
+            }else{
+                background.style.backgroundPosition = ''
+            }
+        })
+    </script>
+    <div class="a">
+        <div class="card">
+            <img src="./img/1.jpg" alt="">
+            <a href="https://tc2006.vercel.app/">->博客</a>
+        </div>
+        <div class="card">
+            <img src="./img/2.jpg" alt="">
+            <a href="./123/index.html">->网站</a>
+        </div>
+        <div class="card">
+            <img src="./img/3.jpg" alt="">
+            <a href="./xc/index.html">->相册</a>
+        </div>
+    </div>
+</body>
+
+</html>
