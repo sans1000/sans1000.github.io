@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- import basic style files mui-player.min.css -->
+    <link rel="stylesheet" type="text/css" href="css/mui-player.min.css"/>
+
+    <!-- import basic script mui-player.min.js -->
+    <script type="text/javascript" src="js/mui-player.min.js"></script>
+
+    <!-- Specify the player container -->
+    <div id="mui-player" style="height: 800px;position: absolute; top: 0%; left: 0%;"></div>
+    <script>
+        // 初始化 MuiPlayer 插件，MuiPlayer 方法传递一个对象，该对象包括所有插件的配置
+        var mp = new MuiPlayer({
+            container:'#mui-player',
+            title:'Title',
+            src:'https://sloth.cdnja.co/v/11/11zp3.mp4',
+        })
+    </script>
+</body>
+</html>
