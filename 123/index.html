@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/buttom.css">
+    <link
+    rel="stylesheet"
+    href="https://at.alicdn.com/t/font_3311026_vcd5lwzdp8.css"
+    />
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body class="flex" background="bg.jpg" style="background-size:100%; background-attachment: fixed;"> 
+    <div style="    height: 40px;
+    width: 300px;
+    position: fixed;
+    bottom: 1%;
+    left: 40%;
+    border-radius: 69px;
+    background: #19aae4;
+    box-shadow:  12px 12px 24px #6fb2bb,
+             -12px -12px 24px #93ecf7;
+    z-index: 10;">
+        <a href="../index.html" class="acd">back</a>
+    </div>
+    <!-- 音乐播放器 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">    <div class="aplayer" data-id="7392824644" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"        data-volume="0.6" ></div><script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script><script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- 音乐播放器 -->
+    <!-- 主区域 -->
+    <div style="max-width: 980px;" class=" flex coloumn">
+        <!-- 头部栏 -->
+        <div style="height: 100px; flex-wrap:nowrap; justify-content: center;" class="boxa">
+            <div class="container title" style="display: flex; flex: 2">
+                <!-- 每个字符之后的span不能有间隙或空行 -->
+                <span class="first">属</span><span>于</span><span>我</span><span>们</span><span>的</span><span class="first">那</span><span>个</span><span>盛</span><span>夏</span><span>。</span>
+
+                <script>
+                    // 写个脚本控制鼠标移入效果
+            
+                    // 找到所有span标签
+                    let spans = document.querySelectorAll('span');
+                    // console.log(spans);
+            
+                    // 为所有的标签增加绑定鼠标移入、移除的事件，并处理相关增加或移除样式操作
+                    for (const key in spans) {
+                        if (spans.hasOwnProperty(key)) {
+                            const element = spans[key];
+            
+                            // key为字符类型，需要转数字。
+                            let index = parseInt(key);
+            
+                            // 增加鼠标移入事件
+                            element.addEventListener("mouseover", (e) => {
+                                element.classList.add('flat');
+            
+                                // 联动操作，控制前后span同时增加样式
+            
+            
+                                // 判断奇数、偶数（spans 是从0开始数的）
+                                if (index % 2 == 0) {
+                                    // 偶数后一个联动
+                                    spans[index + 1].classList.add('flat');
+                                } else {
+                                    // 奇数前一个联动
+                                    spans[index - 1].classList.add('flat');
+                                }
+            
+            
+                            });
+                            // 增加鼠标移出事件
+                            element.addEventListener("mouseout", (e) => {
+                                element.classList.remove('flat');
+            
+                                // 联动操作，控制前后span同时移除样式
+            
+                                // 判断奇数、偶数（spans 是从0开始数的）
+                                if (index % 2 == 0) {
+                                    // 偶数后一个联动
+                                    spans[index + 1].classList.remove('flat');
+                                } else {
+                                    // 奇数前一个联动
+                                    spans[index - 1].classList.remove('flat');
+                                }
+                            });
+            
+            
+            
+                        }
+                    }
+                </script>
+            </div>
+            <div class="flex" style="flex: 1;">
+                <div class="wtf"><div class="button fjj change"><p class="toggle">T</p></div></div>
+                <div class="wtf"><div class="button fjj change"><p class="toggle">C</p></div></div>
+                <div class="wtf"><div class="button fjj change"><p class="toggle">2</p></div></div>
+                <div class="wtf"><div class="button fjj change"><p class="toggle">0</p></div></div>
+                <div class="wtf"><div class="button fjj change"><p class="toggle">0</p></div></div>
+                <div class="wtf"><div class="button fjj change"><p class="toggle">6</p></div></div>
+            </div>
+        </div>
+        <!-- 内容区 --> 
+        <div class="flex1 flex coloumn">
+            <!--  -->
+            <div class=" flex" style="flex: 1; max-height: 400px; max-width: 95%; align-items: center; justify-items: center;">
+                <img src="./img/1234.png" alt="" style="height: 80%; width: 90%; margin: 10%;" class="xiobian">
+            </div>
+            <!--  -->
+            <div class=" flex" style="flex: 2;">
+                <!-- 左区 -->
+                <div class="flex coloumn">
+                    <!-- 主体内容 -->
+                    <div class="flex coloumn" style="flex:3;">
+                        <!-- 班级简介 -->
+                        <div class="flex boxa" style="flex:5; max-height: 970px;">
+                            <div class="flex coloumn" style="flex: 0.618; max-height: 95%; max-width: 400px; ">
+                                <p class="weizhi" style="font-size: 30px; text-align: center; margin-top: 10px; margin-bottom: 10px; font-style:italic; font-weight:bold; color: dodgerblue;">欢迎你访问我们的班级网站</p>
+                                <p class="weizhi" style="font-size: 18px; text-indent:4ch; color: rgb(236, 196, 18); border: solid rgb(101, 228, 158); border-width: 3px; border-radius: 10%; margin-top: 30px; ; margin-bottom:30px ;">我们，这29个人，怀抱活力与梦想。前方有彩虹，前方有鲜花。尽管路途遥远，尽管海浪汹涌，我们仍带着青春的活力与完美的梦想，扬帆启航。念我往昔，追之不可得。思我今朝，幸我所得。</p>
+                                <div style="margin-bottom: 30px; display: flex; justify-content: center;">
+                                    <img src="./img/tj.jpg" alt="" style="height: 300px; width: auto;">
+                                </div>
+                                <div style="margin-top:10px; margin-bottom: 10px;">
+                                    <p style="font-size: 25px; color: #0fbb26; text-align: center; text-decoration: overline #12e9b3;">我们大家庭</p>
+                                    <ul>
+                                        <li class="weizhi" style="font-size: large; background: linear-gradient(90deg, #00e91f, #0ebeff);">班级名称：TC2006</li>
+                                        <li class="weizhi" style="font-size: large; background: linear-gradient(90deg, #00e91f, #0ebeff);">口号：天道酬勤，宁静致远，人生昧履，砥砺前行。</li>
+                                        <li class="weizhi" style="font-size: large; background: linear-gradient(90deg, #00e91f, #0ebeff);">班歌：《工管少年》</li>
+                                        <li class="weizhi" style="font-size: large; background: linear-gradient(90deg, #00e91f, #0ebeff);">班级tersher:</li>
+                                        <li class="weizhi" style="font-size: large; background: linear-gradient(90deg, #00e91f, #0ebeff);">班花：欢迎投稿</li>
+                                        <li class="weizhi" style="font-size: large; background: linear-gradient(90deg, #00e91f, #0ebeff);">班草：欢迎投稿</li>
+                                    </ul>
+                                </div>
+                            </div>                           
+                            <div class="flex" style="flex: 1; background:url('./img/biankuang.png'); Background-size:cover; flex-direction: column;">
+                                <div style="margin-top: 30px;">
+                                    <p style="font-size: 30px; text-align: center; margin-top: 20px; margin-bottom: 10px; font-style:italic; font-weight:bold; color: rgb(96, 187, 21); margin-top: 50px;">板鸡活动</p>
+                                </div>
+                                <div class="flex" style="flex-wrap: wrap; margin-left: 50px; margin-top: 20px;">
+                                    <div class="zx">
+                                        <img src="./img/101.jpg" alt="" class="bjhd">
+                                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" class="abq">班级朗诵</a>
+                                    </div>
+                                    <div class="zx">
+                                        <img src="./img/58.jpg" alt="" class="bjhd">
+                                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" class="abq">欢庆元旦</a>
+                                    </div>
+                                    <div class="zx">
+                                        <img src="./img/153.jpg" alt="" class="bjhd">
+                                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" class="abq">文化活动</a>
+                                    </div>
+                                    <div class="zx">
+                                        <img src="./img/44.jpg" alt="" class="bjhd">
+                                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" class="abq">合唱比赛</a>
+                                    </div>
+                                    <div class="zx">
+                                        <img src="./img/16.jpg" alt="" class="bjhd">
+                                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" class="abq">体育测试</a>
+                                    </div>
+                                    <div class="zx">
+                                        <img src="./img/162.jpg" alt="" class="bjhd">
+                                        <a href="https://www.bilibili.com/video/BV1GJ411x7h7" class="abq">学科班会</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 励志名言 -->
+                        <div class="flex boxa" style="flex:2; flex-direction: column;">
+                            <div>
+                                <p class="bta">青春寄语</p>
+                            </div>
+                            <div>
+                                <div>
+                                    <p class="xcv">
+                                        也许人生的旅程不是那么一帆风顺，可能处处都充满着荆棘和坎坷。然而雄健的苍鹰却能冲破那无边的天际，自由地翱翔于渺茫的天宇。破旧的扁舟却能横渡那幽深的大洋，艰难地航行于蔚蓝的大洲。
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="xcv">
+                                        啊，快走出那阴霾的笼罩，去投身温暖的阳光，去接受青春的洗礼。有一天，你会突然发现世界是那么美好。自信是胜利的武器，自卑是失败的敌军。汗水点滴着生活的印迹，泪花扑洒着进取的源泉。生命终归于死亡，而人生则终归于浪漫的青春。
+                                    </p>
+                                </div>
+                                <div>
+                                    <p class="xcv">
+                                        青春是蓝色的，像深远的晴空，像迷人的海洋，深远辽阔，富于幻想，青春是绿色的，想滴翠的青竹，像坦荡的草原，充满无限生机和活力。<br>青春是白色的，似雪似浪，如云如月，白洁无暇，犹如一张白纸，如写的文字，爱画，最新最美的图画。<br>青春，你是那早晨树梢上低声鸣叫的小鸟，你是那湛蓝天空放飞的信鸽，你是我回忆里永远不褪色的日记，你是我生命中永远欢唱的赞歌！
+                                    </p>
+                                </div>
+                                <div class="flex" style="justify-content: center;">
+                                    <img src="./img/beach.png" alt="" class="xiobian"  style="height: 325px; width: auto;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 上区 -->
+                        <div class="flex " style=" max-height: 400; flex: 1; height: 50%; overflow: hidden;">
+                            <!-- 咨询 -->
+                            <div class="flex boxa" style="flex: 1;">
+                              <!-- 图片 -->
+                              <img src="123.jpg" alt="" style="height: 80%; width: 90%; margin: 10%;">
+                            </div>
+                            <!-- ### -->
+                            <div class="flex boxa coloumn btn-group boxa-wrap" style="flex: 1.5; flex-shrink: 0;overflow-y:scroll;scrollbar-width: none;">
+                                <button style="line-height: 38px;">Apple</button>
+                                <button style="line-height: 38px;">Samsung</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                                <button style="line-height: 38px;">Sony</button>
+                            </div>
+                        </div>
+                        <!-- 诗 -->
+                        <div class="flex">
+                            <div class="flex" style="flex: 1;flex-direction:row; align-content: center;">
+                                <div class="flex boxa" style="flex: 2; flex-direction:column; align-content: center;">
+                                    <div>
+                                        <p style="font-size: 25px; text-align: center;">青春之歌</p>
+                                    </div>
+                                    <img src="./img/flying.gif" alt="" style="position:absolute;top: 10%; left: 5%;">
+                                    <img src="./img/flying.gif" alt="" style="position:absolute;top: 60%; left: 5%;">
+                                    <img src="./img/flying.gif" alt="" style="position:absolute;top: 35%; left: 65%;">
+                                    <div style="align-self: flex-end; margin-top: 20px; margin-right: 20px;">
+                                        <p class="ac style2"> 我低头梳理我的羽毛，</p>
+                                        <p class="ac style2"> 为将要来临的远行做准备；</p>
+                                        <p class="ac style2"> 梳理工作枯燥乏味，</p>
+                                        <p class="ac style2"> 但偏偏必不可少；</p>
+                                        <p class="ac style2"> 我抖了抖翅膀，</p>
+                                        <p class="ac style2"> 一切准备工作都已完成，</p>
+                                        <p class="ac style2"> 蓄势待发。</p><br>
+                                    </div>
+                                    <div style="align-self: flex-start; margin-top: 20px; margin-left: 20px;">
+                                        <p class="ac style2"> 用力拍动着翅膀，</p>
+                                        <p class="ac style2"> 顺势双脚用力一蹬，</p>
+                                        <p class="ac style2"> 我飞了起来。</p>
+                                        <p class="ac style2"> 越来越高，</p>
+                                        <p class="ac style2"> 越来越快。</p><br>                        
+                                        <p class="ac style2"> 听着呼呼的风声，</p>
+                                        <p class="ac style2"> 苍穹大地尽收眼底；</p>
+                                        <p class="ac style2"> 天地万物变得那么渺小。</p>
+                                        <p class="ac style2"> 蔚蓝的天空中，</p>
+                                        <p class="ac style2"> 洁白的云朵里，</p>
+                                        <p class="ac style2"> 我贪婪的享受着这种美妙的感觉。</p><br>   
+                                    </div>
+                                    <div style="align-self: flex-end; margin-top: 20px; margin-right: 20px;">
+                                        <p class="ac style2"> 从始至终我都知道，</p>
+                                        <p class="ac style2"> 在飞翔的途中，</p>
+                                        <p class="ac style2"> 我可能会遇上暴风雨，</p>
+                                        <p class="ac style2"> 狂风暴雨会折断我的翅膀，
+                                        <p class="ac style2"> 把我狠狠地甩到地上；</p>
+                                        <p class="ac style2"> 我也可能会碰见我的天敌，</p>
+                                        <p class="ac style2"> 变成自然界弱肉强食活生生的例子；</p>
+                                        <p class="ac style2"> 还有可能我会被猎人的子弹击中，</p>
+                                        <p class="ac style2"> 成为别人盘中的美味佳肴……</p>
+                                        <p class="ac style2"> 许多许多的其他可能，</p>
+                                        <p class="ac style2"> 随便哪一种都将会要了我的小命。</p><br>  
+                                    </div>  
+                                    <div style="align-self: flex-start; margin-top: 20px; margin-left: 20px; margin-bottom: 20px;">
+                                        <p class="ac style2"> 但我不会因为害怕而放弃飞行，</p>
+                                        <p class="ac style2"> 因为飞翔是我的本能，</p>
+                                        <p class="ac style2"> 让我的存在变得有意义。</p>
+                                        <p class="ac style2"> 不独言成功与失败，</p>
+                                        <p class="ac style2"> 但求无怨亦无悔。</p>
+                                    </div>
+                                </div>
+                                <!-- 诗 -->
+                                <div class="flex boxa" style="flex: 1;">
+                                    <div class="flex flex1 coloumn" style="margin-top: 5%; margin-bottom: 5%;">
+                                        <img src="./img/1.jpg" alt="" class="xiobian" style="margin: 30px;">
+                                        <P class="pome poema" style="text-align: center; font-size: 23px;">《蓝色的青春》</P>
+                                        <P class="pome poema" style="text-align: center;">用一支画笔</P>
+                                        <P class="pome poema" style="text-align: center;">给青春上色</P>
+                                        <P class="pome poema" style="text-align: center;">不留下一丝遗憾和悔恨</P>
+                                        <P class="pome poema" style="text-align: center;">我想，你会给他涂满忧郁的蓝色</P>
+                                        <P class="pome poema" style="text-align: center;">一如你那忧伤 的双眸</P>
+                                        <P class="pome poema" style="text-align: center;">里面闪动着的点点滴滴</P>
+                                        <P class="pome poema" style="text-align: center;">这是蓝色的青春</P>
+                                        <P class="pome poema" style="text-align: center;">我们一路走过，一路欢歌</P>
+                                        <P class="pome poema" style="text-align: center;">有微笑，有泪水</P>
+                                        <P class="pome poema" style="text-align: center;">你却没了当初萌芽的笑意</P>
+                                        <P class="pome poema" style="text-align: center;">你说，青春好忧伤</P>
+                                        <P class="pome poema" style="text-align: center;">我却固执的加上一笔七彩虹</P>
+                                        <P class="pome poema" style="text-align: center;">希冀着，你的心儿能一样年轻</P>
+                                        <P class="pome poema" style="text-align: center;">一样唱出愉快的歌儿</P>
+                                        <P class="pome poema" style="text-align: center;">而伤口也会因为这一笔而愈合</P>
+                                        <P class="pome poema" style="text-align: center;">让嘴角绽放爱的花朵</P>
+                                        <P class="pome poema" style="text-align: center;">阳光也因此变得明媚</P>
+                                        <P class="pome poema" style="text-align: center;">让青春走进梦的殿堂</P>
+                                        <P class="pome poema" style="text-align: center;">泪水也因此变得温暖</P>
+                                        <P class="pome poema" style="text-align: center;">蓝色的青春，我们不要再忧伤</P>
+                                        <P class="pome poema" style="text-align: center;">蓝色的青春，我们记得要幸福</P>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 轮播图 -->
+                    <div class="flex boxa" style="flex: 1.5;max-height: 400px;">
+                        <div class="container bg">
+                            <div class="panel active" style="background-image:url('./lbt/\ \(1\).jpg')">
+                            </div>
+                            <div class="panel" style="background-image:url('./lbt/\ \(1\).png')">
+                            </div>
+                            <div class="panel" style="background-image:url('./lbt/\ \(2\).png')">
+                            </div>
+                            <div class="panel" style="background-image:url('./lbt/\ \(3\).png')">
+                            </div>
+                            <div class="panel" style="background-image:url('./lbt/\ \(4\).png')">
+                            </div>
+                        </div>
+                        <script src="./lbt/script.js"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</body>
+</html>
