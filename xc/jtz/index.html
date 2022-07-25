@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>集体照</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    .shell{
+        height: 100vh;
+        overflow-x: hidden;
+        perspective: 3px;
+    }
+    .shell div{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: 30px;
+        letter-spacing: 2px;
+    }
+    .image{
+        transform: translateZ(-1px) scale(1.6);
+        background-size: cover;
+        height: 100vh;
+        z-index: -1;
+    }
+    .text{
+        height: 50vh;
+        background-color: #fff;
+    }
+    .text h1{
+        color: #000;
+    }
+    .heading{
+        z-index: -1;
+        transform: translateY(-30vh) translateZ(1px);
+        color: #fff;
+        font-size: 30px;
+    }
+</style>
+
+<body>
+    <!-- 音乐播放器 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">    <div class="aplayer" data-id="7392824644" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"        data-volume="0.6" ></div><script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script><script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- 音乐播放器 -->
+
+    <div class="shell">
+        <div class="image" style="background-image: url('./1.jpg');"></div>
+        <div class="heading">
+            <h1>When you are confused</h1>
+        </div>
+        <div class="text">
+            <h1>Set goals in your mind</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./2.jpg');"></div>
+        <div class="heading">
+            <h1>When you're down</h1>
+        </div>
+        <div class="text">
+            <h1>Try to wake up the beast in your heart</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./3.jpg');"></div>
+        <div class="heading">
+            <h1>When prople leave you</h1>
+        </div>
+        <div class="text">
+            <h1>Never lose hope．</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./3a.jpg');"></div>
+        <div class="heading">
+            <h1>Always have faith，</h1>
+        </div>
+        <div class="text">
+            <h1>It allows you to cope．</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./4.jpg');"></div>
+        <div class="heading">
+            <h1>Trying times will pass，</h1>
+        </div>
+        <div class="text">
+            <h1>As they always do．</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./8.png');"></div>
+        <div class="heading">
+            <h1>Just have patience，</h1>
+        </div>
+        <div class="text">
+            <h1>Your dreams will come true．</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./5.jpg');"></div>
+        <div class="heading">
+            <h1>So put on a smile，</h1>
+        </div>
+        <div class="text">
+            <h1>You’ll live through your pain．</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./5a.jpg');"></div>
+        <div class="heading">
+            <h1>Know it will pass，</h1>
+        </div>
+        <div class="text">
+            <h1>And strength you will gain．</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./6.jpg');"></div>
+        <div class="heading">
+            <h1>Never Give Up Hope</h1>
+        </div>
+        <div class="text">
+            <h1>Life doesn’t always give us the joys we want.</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./7.jpg');"></div>
+        <div class="heading">
+            <h1>Must find some work to do,</h1>
+        </div>
+        <div class="text">
+            <h1>Lose not a chance to waken love-</h1>
+        </div>
+
+        <div class="image" style="background-image: url('./8.jpg');"></div>
+        <div class="heading">
+            <h1>Come on.</h1>
+        </div>
+        
+    </div>
+</body>
+
+</html>
