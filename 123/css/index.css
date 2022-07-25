@@ -1,0 +1,240 @@
+body{
+    min-height: 100vh;
+    display: flex;
+}
+
+.flex {
+    display: flex;
+}
+.flex1 {
+    flex: 1;
+}
+.coloumn {
+    flex-direction: column;
+}
+.baise {
+    background-color: white;
+}
+.boxa {
+    margin: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    display: flex;
+    background-color: rgba(255,255, 255,0.1);
+    border-radius: 15px;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+    backdrop-filter: blur(5px);
+}
+.tc {
+    background: linear-gradient(to bottom,#f0610e, #e8771a, #fff34a);
+  	-webkit-background-clip: text;
+  	color: transparent;
+}
+
+/* 圆形纽扣按钮 */
+.button {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #ccd0d4;
+  border-radius: 96px;
+  margin: 4px;
+  justify-content: center;
+  align-items: center;
+  /* 
+      x向右正方向，y向下正方向，
+      内外要分清，
+      x坐标、y坐标、模糊半径blur-radius、扩展半径spread-radius、颜色color
+      xybsc
+  */
+  box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.5), inset 0 -3px 5px 2px rgba(0, 0, 0, 0.2), inset 0 3px 5px 1px rgba(255, 255, 255, 0.7), inset 0 0 5px 1px rgba(255, 255, 255, 0.8), inset 0 20px 30px 0 rgba(255, 255, 255, 0.2);
+}
+/* +和-符号 */
+.toggle{
+  display: block;
+  color: rgba(11, 192, 247, 0.295);
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  opacity: 0.9;
+  text-shadow: 1px 1px 3px #ccd0d4, 0px 0px 0px rgba(0, 0, 0, 0.8), 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+/* 旋转动画 */
+.wtf .fjj {
+    animation-play-state: running;
+}
+
+.change {
+    animation-name: xz;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+    animation-timing-function: linear;
+    animation-duration: 3s;
+}
+
+@keyframes xz {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.photo {
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+    border-radius: 15px;
+}
+@font-face {
+    font-family: 'poem';
+    src:  url('../poem.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'poemb';
+    src:  url('../p.ttf') format('truetype');
+    font-weight: normal;
+    font-style:italic;
+}
+.pome{
+    font-family: "poem";
+    font-size: 17px;
+}
+.poema{
+background: linear-gradient(90deg, #ff3c41, #fc0, #0ebeff);
+background-size: 0 3px;
+background-repeat: no-repeat;
+background-position: 0 100%;
+transition: 1s all;
+color: rgb(16, 83, 160);
+}
+
+.poema:hover {
+    background-size: 100% 3px;
+    color: rgb(202, 176, 29);
+}
+
+/* 图片修边 */
+.xiobian {
+    border-radius: 50px;
+}
+
+/* 班级活动 */
+.zx {
+    height: 230px;
+    width: 250px;
+    margin: 10px;
+}
+.bjhd {
+    height: 200px;
+    width: 250px;
+    border-radius: 50px;
+}
+.abq {
+    font-size:medium;
+    text-align: center;
+}
+/* 轮播图 */
+.container{
+    display: flex;
+    width: 60vw;
+}
+.bg{
+    /* 引入字体 */
+    font-family: 'Muli',sans-serif;
+    /* 弹性布局 水平 + 垂直居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    margin: 0;
+}
+
+.panel{
+    /* 跟封面一样大小 */
+    background-size: cover;
+    /* 把封面图片居中 */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    /* 边框圆角 */
+    border-radius: 50px;
+    color: #fff;
+    /* 鼠标放上变小手 */
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    /* 相对定位 */
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+}
+
+.panel h3{
+    font-size: 24px;
+    /* 绝对定位 */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+@media (max-width:480px){
+    .container{
+        width: 100vw;
+    }
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5){
+        display: none;
+    }
+}
+/* 励志名言 */
+.bta {
+    font-size: 30px;
+    color: #ff3c41;
+    margin: 20px;
+}
+.xcv{
+    font-size: 20px;
+    line-height: 30px;
+    color: rgb(211, 177, 40);
+    font-style: italic;
+    margin-bottom: 20px;
+    text-indent:4ch;
+}
+
+
+.ac {
+    font-family: p;
+    font-size: 17px;
+}
+.style2{
+	background: linear-gradient(to right,#0b76ce, #179c0b, #e7ad0e);
+  	-webkit-background-clip: text;
+  	color: transparent;
+}
+
+.acd {
+    list-style: none;
+    cursor: pointer;
+    color: #052b4b;
+    position: relative;
+    top: 25%;
+    left: 10%;
+    font-size: larger;
+}
