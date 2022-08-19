@@ -7,11 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TC2006</title>
     <style>
-        html,
+                	@media (min-width: 0px) and (max-width:992px) {
+        		.div1{
+        			width: 100px;
+        			height: 100px;
+        			background-color: red;
+        		}
+                html,
         body {
             margin: 0;
             padding: 0;
-            height: 205vh;
+            height: 200vh;
             overflow-x: hidden;
         }
 
@@ -20,7 +26,123 @@
             background-size: cover;
             background-position: 50% 50%;
             height: 200vh;
-            font: 900 23rem '';
+            font: 900 8rem '';
+            line-height: 100vh;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .background::before {
+            content: '';
+            background-size: cover;
+            background-image: inherit;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -99;
+        }
+
+        h1 {
+            position: absolute;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 10px;
+            color: #fff;
+        }
+
+        h2 {
+            position: absolute;
+            letter-spacing: 2px;
+            top: 70vh;
+            width: 60%;
+            color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            background-color: rgba(0, 0, 0, .3);
+        }
+        a:link {color: rgb(199, 119, 43)} /* 未被访问的链接 蓝色 */
+        a:visited {color: rgb(199, 119, 43)} /* 已被访问过的链接 蓝色 */
+        a:hover {color: rgb(199, 119, 43)} /* 鼠标悬浮在上的链接 蓝色 */
+        a:active {color: rgb(199, 119, 43)} /* 鼠标点中激活链接 蓝色 */
+        .a {
+            position: absolute;
+            top: 160vh;
+            left: 10%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .card {
+            margin: 8px;
+            margin-right: 20px;
+            margin-top: 8px;
+            display: flex;
+            background-color: rgba(255,255, 255,0.1);
+            border-radius: 15px;
+            box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+            border-top: 1px solid rgba(255,255,255,0.5);
+            border-left: 1px solid rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+            height: 200px;
+            width: 100px;
+            align-items: center;
+            flex-direction: column;
+        }
+        img {
+            width: 80px;
+            height: 140px;
+            border-radius: 50px;
+            margin-top: 10px;
+        }
+        a {
+            margin-top: 20px;
+            color: #b85e14;
+            text-decoration: none;
+            font-size: larger;
+            background-color: rgb(233, 165, 62);
+            border-radius: 50px;
+            box-shadow:  6px 6px 12px #ebc14e,
+             -6px -6px 12px #dabc86;
+        }
+        @font-face {
+            font-family: 'poemb';
+            src:  url('./123/JamMono.ttf') format('truetype');
+            font-weight: normal;
+            font-style:italic;
+        }
+        	}
+
+        
+        	/* 大屏幕（大桌面显示器，大于等于 1200px） */
+        	@media (min-width: 992px) {
+        		.div1{
+        			width: 500px;
+        			height: 500px;
+        			background-color: aqua;
+                
+                
+        		}
+                html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+            overflow-x: hidden;
+        }
+
+        .background {
+            background-image: url("./img/road.jpg");
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 200vh;
+            font: 900 18rem '';
             line-height: 130vh;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -61,10 +183,10 @@
             padding: 30px;
             background-color: rgba(0, 0, 0, .3);
         }
-        a:link {color: rgb(197, 197, 199)} /* 未被访问的链接 蓝色 */
-        a:visited {color: rgb(197, 197, 199)} /* 已被访问过的链接 蓝色 */
-        a:hover {color: rgb(197, 197, 199)} /* 鼠标悬浮在上的链接 蓝色 */
-        a:active {color: rgb(197, 197, 199)} /* 鼠标点中激活链接 蓝色 */
+        a:link {color: rgb(199, 119, 43)} /* 未被访问的链接 蓝色 */
+        a:visited {color: rgb(199, 119, 43)} /* 已被访问过的链接 蓝色 */
+        a:hover {color: rgb(199, 119, 43)} /* 鼠标悬浮在上的链接 蓝色 */
+        a:active {color: rgb(199, 119, 43)} /* 鼠标点中激活链接 蓝色 */
         .a {
             position: absolute;
             top: 160vh;
@@ -97,12 +219,13 @@
         }
         a {
             margin-top: 20px;
+            color: #b85e14;
             text-decoration: none;
             font-size: larger;
-            background-color: rgb(116, 194, 116);
+            background-color: rgb(233, 165, 62);
             border-radius: 50px;
-            box-shadow:  6px 6px 12px #6fb2bb,
-             -6px -6px 12px #93ecf7;
+            box-shadow:  6px 6px 12px #ebc14e,
+             -6px -6px 12px #dabc86;
         }
         @font-face {
             font-family: 'poemb';
@@ -110,43 +233,12 @@
             font-weight: normal;
             font-style:italic;
         }
+        	}
+
     </style>
 </head>
 
 <body>
-    <script>
-        const width = document.documentElement.clientWidth;
-        const height = document.documentElement.clientHeight;
-        var screen_width = width; //屏幕宽度
-        if (width < height) {
-        screen_width = height; //如果 是竖屏，灵感的宽度就等于屏高
-        const contentDOM = document.getElementById('lingan_1');
-        contentDOM.style.width = height + 'px';
-        contentDOM.style.height = width + 'px';
-        contentDOM.style.top = (height - width) / 2 + 'px';
-        contentDOM.style.left = 0 - (height - width) / 2 + 'px';
-        contentDOM.style.transform = 'rotate(90deg)';
-        }
-        //根据手机旋转的角度来判断
-        const evt = "onorientationchange" in window ? "orientationchange" : "resize"; //旋转事件
-        window.addEventListener(evt, function () { //事件监听
-        if (window.orientation === 90 || window.orientation === -90) { //旋转到 90 或 -90 度，即竖屏到横屏
-        screen_width = height; //横屏，灵感的宽度就等于屏高
-        contentDOM.style.width = height + 'px';
-        contentDOM.style.height = width + 'px';
-        contentDOM.style.top = '0px';
-        contentDOM.style.left = '0px';
-        contentDOM.style.transform = 'none'; //不旋转；
-        }else{ //旋转到 180 或 0 度，即横屏到竖屏
-        screen_width = height; //竖屏，灵感的宽度就等于屏高
-        contentDOM.style.width = height + 'px';
-        contentDOM.style.height = width + 'px';
-        contentDOM.style.top = (height - width) / 2 + 'px';
-        contentDOM.style.left = 0 - (height - width) / 2 + 'px';
-        contentDOM.style.transform = 'rotate(90deg)'; //旋转90度
-        }
-        }, false);
-    </script>
     <!-- 音乐播放器 --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">    <div class="aplayer" data-id="7392824644" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"        data-volume="0.6" ></div><script>var meting_api='http://api.mizore.cn/meting/api.php?server=:server&type=:type&id=:id'</script><script src="http://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="http://cdn.jsdelivr.net/npm/meting@1.2.0/dist/Meting.min.js"></script><!-- 音乐播放器 -->
     <h1><br><br>人间忽晚，山河已秋。</h1>
     <div class="background"><span>TC2006</span></div>
@@ -169,17 +261,27 @@
     </script>
     <div class="a">
         <div class="card">
-            <img src="./img/1.jpg" alt="">
+            <img src="./img/1.jpg" alt="" class="imga">
             <a href="https://tc2006.vercel.app/">->博客</a>
+            <p>兼容了啦=)</p>
         </div>
         <div class="card">
-            <img src="./img/2.jpg" alt="">
+            <img src="./img/2.jpg" alt="" class="imga">
             <a href="./123/index.html">->网站</a>
+            <p>电脑食用更佳</p>
         </div>
         <div class="card">
-            <img src="./img/3.jpg" alt="">
+            <img src="./img/3.jpg" alt="" class="imga">
             <a href="./xc/index.html">->相册</a>
+            <p>电脑食用更佳</p>
         </div>
+        <script>
+             a = document.body.clientWidth;
+            if (a <= 922) {
+                var b = document.getElementById(card)
+                b.removeChild(img)
+            }           
+        </script>
     </div>
 </body>
 
